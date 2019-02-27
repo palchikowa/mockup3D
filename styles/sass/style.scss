@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Laila|Roboto+Condensed');
+@import "reset/reset.scss";
+
+/* ========================== debug =================== */
+
+$b-debug: 1px solid green;
+$c-debug: rgba(0,0,0,0.1);
+
+/* ========================== / debug =================== */
+
+$f: Arial, sans-serif;
+$lh: 1.5;
+$t-transition: 0.6s;
+
+$c-main: #4f415d;
+$c-accent: #9c89ad;
+
+body{
+	font-family: 'Roboto', $f;
+	background-color: $c-main;
+}
+
+.cd-product{
+
+	&-container{
+		margin: 0 auto;
+		padding: 1em 0;
+		width: 1200px;
+		min-height: 500px;
+		position: relative;
+		color: #fff;
+	}
+
+	&-intro{
+		padding-top: 2em;
+		position: absolute;
+		width: 50%;
+		left: 0;
+		opacity: 1;
+		transition: $t-transition;
+
+		h1{
+			font-size: 3em;
+			padding: 1em 0 0.5em 0;
+			text-transform: capitalize;
+			font-family: 'Laila', $f; 
+		}
+		p{
+			line-height: 1.5;
+			font-size: 1.25em;
+		}
+	}
+
+
+
+	&-mockup{
+		padding: 3em 0;
+		position: absolute;
+		background-color: $c-main;
+		width: 50%;
+		left: 50%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		// transform-style: preserve-3d;
+		
+		transform: rotateX(-60deg) rotateZ(-40deg) translateX(50px) translateY(100px);
+
+		transition: $t-transition;
+
+		img{
+			display: block;
+			width: 25em;
+			height: 35em;
+			background-color: rgba(0,0,0,0.1);
+			
+		}
+	}
+
+	&-triggers{
+		display: flex;
+		margin: 2em 0;
+	}
+
+	&-btn{
+		width: 12em;
+		display: block;
+		padding: 1.5em;
+		text-align: center;
+		margin-right: 0.8em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 0.875em;
+		color: currentColor;
+		letter-spacing: 2px;
+		background-color: $c-accent;
+		box-shadow: 2px 2px 3px rgba(0,0,0,0.2), 0 -1px 0 rgba(255,255,255,0.4);
+
+	}
+
+/* ================== activation state ================== */
+
+&-showMockup{
+	width: 100%;
+	left: 0;
+	transform: rotateX(0) rotateZ(0) translateX(0) translateY(0);
+	}
+}
+
+.driven{
+	left: -50%;
+	opacity: 0;
+}
+
+.closed{
+	margin: 1em 0;
+	box-sizing: content-box;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.5em 1.5em;
+	color: currentColor;
+	overflow: hidden;
+	visibility: visible;
+	opacity: 1;
+	z-index: 4;
+
+	svg{
+		$s: 3em;
+		width: $s;
+		height: $s;
+		fill: currentColor;
+	}
+}
+
+.closed-up{
+	overflow: hidden;
+	visibility: hidden;
+	padding: 0;
+	opacity: 0;
+}
+

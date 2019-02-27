@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Laila|Roboto+Condensed");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+/* ========================== debug =================== */
+/* ========================== / debug =================== */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #4f415d; }
+
+.cd-product {
+  /* ================== activation state ================== */ }
+  .cd-product-container {
+    margin: 0 auto;
+    padding: 1em 0;
+    width: 1200px;
+    min-height: 500px;
+    position: relative;
+    color: #fff; }
+  .cd-product-intro {
+    padding-top: 2em;
+    position: absolute;
+    width: 50%;
+    left: 0;
+    opacity: 1;
+    transition: 0.6s; }
+    .cd-product-intro h1 {
+      font-size: 3em;
+      padding: 1em 0 0.5em 0;
+      text-transform: capitalize;
+      font-family: "Laila", Arial, sans-serif; }
+    .cd-product-intro p {
+      line-height: 1.5;
+      font-size: 1.25em; }
+  .cd-product-mockup {
+    padding: 3em 0;
+    position: absolute;
+    background-color: #4f415d;
+    width: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotateX(-60deg) rotateZ(-40deg) translateX(50px) translateY(100px);
+    transition: 0.6s; }
+    .cd-product-mockup img {
+      display: block;
+      width: 25em;
+      height: 35em;
+      background-color: rgba(0, 0, 0, 0.1); }
+  .cd-product-triggers {
+    display: flex;
+    margin: 2em 0; }
+  .cd-product-btn {
+    width: 12em;
+    display: block;
+    padding: 1.5em;
+    text-align: center;
+    margin-right: 0.8em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.875em;
+    color: currentColor;
+    letter-spacing: 2px;
+    background-color: #9c89ad;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(255, 255, 255, 0.4); }
+  .cd-product-showMockup {
+    width: 100%;
+    left: 0;
+    transform: rotateX(0) rotateZ(0) translateX(0) translateY(0); }
+
+.driven {
+  left: -50%;
+  opacity: 0; }
+
+.closed {
+  margin: 1em 0;
+  box-sizing: content-box;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.5em 1.5em;
+  color: currentColor;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+  z-index: 4; }
+  .closed svg {
+    width: 3em;
+    height: 3em;
+    fill: currentColor; }
+
+.closed-up {
+  overflow: hidden;
+  visibility: hidden;
+  padding: 0;
+  opacity: 0; }
+
+/*# sourceMappingURL=style.css.map */
